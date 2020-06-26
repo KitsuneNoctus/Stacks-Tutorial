@@ -18,6 +18,9 @@
 		3FCFC0D724A550FE00E1364C /* StacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFC0D624A550FE00E1364C /* StacksTests.swift */; };
 		3FCFC0E224A550FE00E1364C /* StacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFC0E124A550FE00E1364C /* StacksUITests.swift */; };
 		3FCFC0F024A55FBD00E1364C /* CustomButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFC0EF24A55FBD00E1364C /* CustomButtonNode.swift */; };
+		3FCFC0F224A5662800E1364C /* ObstacleSpawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFC0F124A5662800E1364C /* ObstacleSpawner.swift */; };
+		3FCFC0F424A5695700E1364C /* Schemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFC0F324A5695700E1364C /* Schemes.swift */; };
+		3FCFC0F624A5B03E00E1364C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFC0F524A5B03E00E1364C /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		3FCFC0E124A550FE00E1364C /* StacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksUITests.swift; sourceTree = "<group>"; };
 		3FCFC0E324A550FE00E1364C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FCFC0EF24A55FBD00E1364C /* CustomButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonNode.swift; sourceTree = "<group>"; };
+		3FCFC0F124A5662800E1364C /* ObstacleSpawner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleSpawner.swift; sourceTree = "<group>"; };
+		3FCFC0F324A5695700E1364C /* Schemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schemes.swift; sourceTree = "<group>"; };
+		3FCFC0F524A5B03E00E1364C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 				3FCFC0BD24A550F600E1364C /* GameScene.sks */,
 				3FCFC0BF24A550F600E1364C /* Actions.sks */,
 				3FCFC0C124A550F600E1364C /* GameScene.swift */,
+				3FCFC0F524A5B03E00E1364C /* Player.swift */,
+				3FCFC0F124A5662800E1364C /* ObstacleSpawner.swift */,
+				3FCFC0F324A5695700E1364C /* Schemes.swift */,
 				3FCFC0EF24A55FBD00E1364C /* CustomButtonNode.swift */,
 				3FCFC0C324A550F600E1364C /* GameViewController.swift */,
 				3FCFC0C524A550F600E1364C /* Main.storyboard */,
@@ -272,7 +281,10 @@
 			files = (
 				3FCFC0C224A550F600E1364C /* GameScene.swift in Sources */,
 				3FCFC0C424A550F600E1364C /* GameViewController.swift in Sources */,
+				3FCFC0F424A5695700E1364C /* Schemes.swift in Sources */,
 				3FCFC0F024A55FBD00E1364C /* CustomButtonNode.swift in Sources */,
+				3FCFC0F624A5B03E00E1364C /* Player.swift in Sources */,
+				3FCFC0F224A5662800E1364C /* ObstacleSpawner.swift in Sources */,
 				3FCFC0BC24A550F600E1364C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

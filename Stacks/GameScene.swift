@@ -23,9 +23,9 @@ class GameScene: SKScene {
     let fixedDelta: CFTimeInterval = 1.0 / 60.0 /* 60 FPS */
     let scrollSpeed: CGFloat = 200
     var scrollNode: SKNode!
-    var player: SKSpriteNode!
-    var obstacleSpawner: SKNode!
-    var playButton: SKSpriteNode!
+    var player: Player!
+    var obstacleSpawner: ObstacleSpawner!
+    var playButton: CustomButtonNode!
     var frontBarrier: SKSpriteNode!
     
     
@@ -56,14 +56,34 @@ class GameScene: SKScene {
         } else {
             print("playButton was not initialized properly")
         }
+        
+        if let spawner = self.childNode(withName: "obstacleSpawner") as? ObstacleSpawner {
+          self.obstacleSpawner = spawner
+        } else {
+          print("spawner could not be connected properly")
+        }
+        
+        if let player = self.childNode(withName: "player") as? Player {
+            self.player = player
+            print(self.player)
+        } else {
+            print("player was not initialized properly")
+        }
+//        print(self.player!)
+        player.setup()
+
     }
     
-    override func didMove(to view: SKView) {
-        
-    }
+//    override func didMove(to view: SKView) {
+//
+//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        // ray that detects other nodes above the player
+        let nodeCheck = physicsWorld.body(alongRayStart: player.position, end: CGPoint(x: player.position.x, y: player.position.y + 100))
+        if nodeCheck?.node == nil {
+            player.stack(scene: scene!)
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -71,9 +91,11 @@ class GameScene: SKScene {
         super.update(currentTime)
         /* Process world scrolling */
         scrollWorld()
+        obstacleSpawner.generate(scene: self.scene!)
 
     }
     
+    //MARK: Scroll World
     func scrollWorld() {
         /* Scroll World */
         scrollNode.position.x -= scrollSpeed * CGFloat(fixedDelta)
